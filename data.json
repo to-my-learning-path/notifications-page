@@ -1,0 +1,116 @@
+{
+  "notification": [
+    {
+      "id": 1,
+      "isRead": false,
+      "time": "1m ago",
+      "user": {
+        "image": "avatar-mark-webber.webp",
+        "name": "Mark Webber"
+      },
+      "type": "reacted to your recent post",
+      "event": {
+        "post": "My first tournament today!",
+        "group": "",
+        "picture": "",
+        "message": ""
+      }
+    },
+    {
+      "id": 2,
+      "isRead": false,
+      "time": "5m ago",
+      "user": {
+        "image": "avatar-angela-gray.webp",
+        "name": "Angela Gray"
+      },
+      "type": "followed you",
+      "event": {
+        "post": "",
+        "group": "",
+        "picture": "",
+        "message": ""
+      }
+    },
+    {
+      "id": 3,
+      "isRead": false,
+      "time": "1 day ago",
+      "user": {
+        "image": "avatar-jacob-thompson.webp",
+        "name": "Jacob Thompson"
+      },
+      "type": "has joined your group",
+      "event": {
+        "post": "",
+        "group": "Chess Club",
+        "picture": "",
+        "message": ""
+      }
+    },
+    {
+      "id": 4,
+      "isRead": true,
+      "time": "5 days ago",
+      "user": {
+        "image": "avatar-rizky-hasanuddin.webp",
+        "name": "Rizky Hasanuddin"
+      },
+      "type": "sent you a private message",
+      "event": {
+        "post": "",
+        "group": "",
+        "picture": "",
+        "message": "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game."
+      }
+    },
+    {
+      "id": 5,
+      "isRead": true,
+      "time": "1 week ago",
+      "user": {
+        "image": "avatar-kimberly-smith.webp",
+        "name": "Kimberly Smith"
+      },
+      "type": "commented on your picture",
+      "event": {
+        "post": "",
+        "group": "",
+        "picture": "image-chess.webp",
+        "message": ""
+      }
+    },
+    {
+      "id": 6,
+      "isRead": true,
+      "time": "2 weeks ago",
+      "user": {
+        "image": "avatar-nathan-peterson.webp",
+        "name": "Nathan Peterson"
+      },
+      "type": "reacted to your recent post",
+      "event": {
+        "post": "5 end-game strategies to increase your win rate",
+        "group": "",
+        "picture": "",
+        "message": ""
+      }
+    },
+    {
+      "id": 7,
+      "isRead": true,
+      "time": "2 weeks ago",
+      "user": {
+        "image": "avatar-anna-kim.webp",
+        "name": "Anna Kim"
+      },
+      "type": "left the group",
+      "event": {
+        "post": "",
+        "group": "Chess Club",
+        "picture": "",
+        "message": ""
+      }
+    }
+  ]
+}
