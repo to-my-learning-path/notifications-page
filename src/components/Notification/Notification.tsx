@@ -36,14 +36,22 @@ const Notification: React.FC = () => {
     setUserData({ ...userData, notification: newObj });
   };
   return (
-    <div>
-      <div>
-        <p>
-          Notifications<span>{totalNotifcations?.toString()}</span>
+    <div className=" bg-white rounded-lg px-4 max-w-3xl shadow-lg">
+      <div className=" flex justify-between items-center py-8">
+        <p className=" font-bold text-veryDarkBlue text-lg">
+          Notifications
+          <span className=" ml-2 text-white bg-blue px-2 py-1 rounded-md">
+            {totalNotifcations?.toString()}
+          </span>
         </p>
-        <button onClick={handleOnClick}>Mark all as read</button>
+        <button
+          className=" text-darkGrayishBlue hover:text-blue"
+          onClick={handleOnClick}
+        >
+          Mark all as read
+        </button>
       </div>
-      <div>
+      <div className=" flex flex-col gap-4">
         {userData?.notification.map(
           (notificationItem: NotificationArray): ReactElement => (
             <NotificationItem
@@ -62,21 +70,62 @@ type NotificationItemProps = {
 };
 const NotificationItem: React.FC<NotificationItemProps> = ({ data }) => {
   return (
-    <div>
-      <div>
-        {/* <img src={require(`../../assets/images/${data.user.image}`)} alt="" /> */}
-        <img src={getImageUrl(data.user.image)} alt="Profile Image" />
-        <div>
-          <p>{data.user.name}</p>
-          <p>{data.type}</p>
-          {data.event.post && <p>{data.event.post}</p>}
-          {data.event.group && <p>{data.event.group}</p>}
+    <div
+      className={`${
+        data.isRead === false ? "bg-veryLightGrayishBlue" : ""
+      } p-4 flex gap-4`}
+    >
+      <img
+        className=" self-start w-14"
+        src={getImageUrl(data.user.image)}
+        alt="Profile Image"
+      />
+      <div className=" w-full">
+        <div className="flex justify-between">
+          <div className="flex flex-col">
+            <p className=" space-x-1">
+              <a
+                href="#"
+                className=" text-veryDarkBlue hover:text-blue font-bold"
+              >
+                {data.user.name}
+              </a>
+              <span className=" text-darkGrayishBlue">{data.type}</span>
+              {data.event.post && (
+                <a
+                  href="#"
+                  className=" text-darkGrayishBlue hover:text-blue font-bold"
+                >
+                  {data.event.post}
+                </a>
+              )}
+              {data.event.group && (
+                <a href="#" className=" text-blue font-bold">
+                  {data.event.group}
+                </a>
+              )}
+              {data.isRead === false ? (
+                <span className=" bg-red rounded-full inline-block w-2 h-2"></span>
+              ) : (
+                ""
+              )}
+            </p>
+            <p className=" text-grayishBlue">{data.time}</p>
+          </div>
+          {data.event.picture && (
+            <img
+              className=" h-14 aspect-auto cursor-pointer"
+              src={getImageUrl(data.event.picture)}
+              alt=""
+            />
+          )}
         </div>
-        {data.event.picture && (
-          <img src={getImageUrl(data.event.picture)} alt="" />
+        {data.event.message && (
+          <p className=" text-darkGrayishBlue mt-4 hover:bg-lightGrayishBlue2 cursor-pointer p-4 border-2 border-lightGrayishBlue2 rounded-md">
+            {data.event.message}
+          </p>
         )}
       </div>
-      <div>{data.event.message && <p>{data.event.message}</p>}</div>
     </div>
   );
 };

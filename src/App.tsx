@@ -4,7 +4,7 @@ import Notification from "./components/Notification";
 
 function App() {
   return (
-    <main>
+    <main className=" grid place-items-center md:py-16">
       <Notification />
     </main>
   );
